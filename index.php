@@ -16,4 +16,8 @@
         $url = $link.'/sendMessage?chat_id='.$msg_id.'&text='.urlencode($text);
         file_get_contents($url);
     }
+
+    if ($text) {
+        sendMsg();
+    }
 ?>
