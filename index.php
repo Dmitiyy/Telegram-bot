@@ -8,16 +8,14 @@
     $msg_id = $updates['message']['from']['id'];
     $text = $updates['message']['text'];
 
-    function sendMsg () {
+    function sendMsg ($text, $msg_id) {
         global $link;
-        global $msg_id;
-        global $text;
 
         $url = $link.'/sendMessage?chat_id='.$msg_id.'&text='.urlencode($text);
         file_get_contents($url);
     }
 
-    if ($text) {
-        sendMsg();
+    if ($text == 'hi') {
+        sendMsg('hello', $msg_id);
     }
 ?>
