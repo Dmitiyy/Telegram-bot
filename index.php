@@ -17,5 +17,6 @@
 
     if ($text == 'hi') {
         sendMsg('hello', $msg_id);
+        echo $text;
     }
 ?>
